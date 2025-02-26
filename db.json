@@ -1,37 +1,19 @@
 {
-  "events": [
+  "product": "Yu-Gi-Oh!",
+  "brand": "Konami",
+  "description": "A fast paced card game that utilizes resource management and combo chains to overwhelm your opponent!",
+  "cards": [
     {
-      "id": 5928101,
-      "category": "animal welfare",
-      "title": "Cat Adoption Day",
-      "description": "Find your new feline friend at this event!",
-      "location": "Nyanhattan",
-      "date": "January 28, 2022",
-      "time": "12:00",
-      "petsAllowed": true,
-      "organizer": "Kat Laydee"
-    },
-    {
-      "id": 4582797,
-      "category": "food",
-      "title": "Community Gardening",
-      "description": "Join us as we tend to the community edible plants.",
-      "location": "Pedalton",
-      "date": "March 14, 2022",
-      "time": "10:00",
-      "petsAllowed": true,
-      "organizer": "Fern Pollin"
-    },
-    {
-      "id": 8419988,
-      "category": "sustainability",
-      "title": "Beach Cleanup",
-      "description": "Help pick up trash along the shore",
-      "location": "Playa Del Carmen",
-      "date": "July 22, 2022",
-      "time": "11:00",
-      "petsAllowed": false,
-      "organizer": "Carey Wales"
+      "id": "Striker1",
+      "archetype": "Sky Striker",
+      "name": "Sky Striker Ace - Kagari",
+      "elementalAttribute": "Fire",
+      "type": ["Machine", "Link", "Effect"],
+      "description": "1 non-FIRE 'Sky Striker Ace' monster If this card is Special Summoned:\nYou can target 1 'Sky Striker' Spell in your GY;\nadd it to your hand. Gains 100 ATK for each Spell in your GY. You can only Special Summon 'Sky Striker Ace - Kagari(s)' once per turn",
+      "attackPower": 1500,
+      "rarity": "Premium Gold Rare",
+      "averagePrice": 9.08,
+      "image": "@src/assets/images/SkyStriker1.jpg"
     }
   ]
 }
