@@ -10,10 +10,10 @@ const apiClient = axios.create({
 })
 
 export default {
-  getEvents() {
-    return apiClient.get('/events')
+  getCards() {
+    return apiClient.get('/cards')
   },
-  getEvent(id) {
-    return apiClient.get('/events/' + id)
+  getCard(id) {
+    return apiClient.get('/cards/' + id)
   },
 }
