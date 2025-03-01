@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import EventService from '@/services/EventService.js'
+import CardService from '../services/CardService.js'
 
 const card = ref(null)
 
@@ -11,7 +11,7 @@ const props = defineProps({
 })
 
 onMounted(() => {
-  EventService.getEvent(props.id)
+  CardService.getCard(props.id)
     .then((response) => {
       card.value = response.data
     })

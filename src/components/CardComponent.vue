@@ -16,7 +16,7 @@ defineProps({
 </template>
 
 <style scoped>
-.display-card {
+.display-card img {
   padding: 20px;
   width: 250px;
   height: auto;
