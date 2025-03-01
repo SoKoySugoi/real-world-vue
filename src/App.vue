@@ -26,10 +26,10 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 nav {
   padding: 30px;
-  text-decoration: none;
 }
 nav a {
   font-weight: bold;
+  text-decoration: none;
   color: #2c3e50;
 }
 nav a.router-link-exact-active {
