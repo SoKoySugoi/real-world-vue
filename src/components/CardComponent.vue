@@ -18,7 +18,7 @@ defineProps({
 <style scoped>
 .display-card img {
   padding: 20px;
-  width: 250px;
+  width: 150px;
   height: auto;
   cursor: pointer;
   border: 1px solid #39495c;
