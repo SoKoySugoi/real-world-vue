@@ -30,8 +30,7 @@ onMounted(() => {
         <ul class="col-md-2 details">
           <li v-if="card.attribute">Attribute: {{ card.attribute }}</li>
           <li v-if="card.type">Type: {{ card.type }}</li>
-          <li v-if="card.attack">ATK: {{ card.attack }}</li>
-          <li v-if="card.defense">DEF: {{ card.defense }}</li>
+          <li v-if="card.attack || card.defense">ATK/DEF: {{ card.attack }}/{{ card.defense }}</li>
           <li>Rarity: {{ card.rarity }}</li>
           <li>
             Description:
