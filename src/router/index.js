@@ -12,7 +12,7 @@ const router = createRouter({
       component: CardListView,
     },
     {
-      path: '/card/:id',
+      path: '/cards/:id',
       name: 'card-details',
       props: true,
       component: CardDetailsView,

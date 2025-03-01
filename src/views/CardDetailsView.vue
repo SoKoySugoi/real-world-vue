@@ -25,7 +25,7 @@ onMounted(() => {
   <div v-if="card">
     <img v-bind:src="card.image" />
     <p v-if="card.attribute">{{ card.attribute }}</p>
-    <p v-if="car.type">{{ card.type }}</p>
+    <p v-if="card.type">{{ card.type }}</p>
     <p v-if="card.attack">{{ card.attack }}</p>
     <p v-if="card.defense">{{ card.defense }}</p>
     <p>{{ card.rarity }}</p>
