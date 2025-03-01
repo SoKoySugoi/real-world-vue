@@ -26,6 +26,7 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 nav {
   padding: 30px;
+  text-decoration: none;
 }
 nav a {
   font-weight: bold;
@@ -33,6 +34,7 @@ nav a {
 }
 nav a.router-link-exact-active {
   color: #42b983;
+  text-decoration: none;
 }
 h2 {
   font-size: 20px;
