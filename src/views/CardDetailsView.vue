@@ -26,9 +26,11 @@ onMounted(() => {
   <div v-if="card">
     <div class="container">
       <div class="row">
-        <div class="col-md-3"></div>
-        <img class="col-md-3" v-bind:src="card.image" />
-        <ul class="col-md-2 details">
+        <div class="col-xs-3"></div>
+        <div class="display-card">
+          <img class="col-xs-3" v-bind:src="card.image" />
+        </div>
+        <ul class="col-xs-3 details">
           <li>
             <strong>Name: </strong> <span>{{ card.name }}</span>
           </li>
@@ -58,14 +60,22 @@ onMounted(() => {
           <AddButton :card="card" />
         </ul>
       </div>
+      <div class="col-xs-3"></div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.display-card img {
+  padding: 20px;
+  width: flex;
+  height: auto;
+  border: 1px solid #39495c;
+  margin-top: 18px;
+}
 ul {
   list-style-type: none;
-  width: 260px;
+  width: flex;
   text-align: left;
 }
 li {
