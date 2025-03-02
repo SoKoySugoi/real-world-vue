@@ -8,11 +8,13 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink class="card-details-link" :to="{ name: 'card-details', params: { id: card.id } }">
-    <div class="display-card">
-      <img v-bind:src="card.image" />
-    </div>
-  </RouterLink>
+  <div v-if="card">
+    <RouterLink class="card-details-link" :to="{ name: 'card-details', params: { id: card.id } }">
+      <div class="display-card">
+        <img v-bind:src="card.image" />
+      </div>
+    </RouterLink>
+  </div>
 </template>
 
 <style scoped>
@@ -23,6 +25,7 @@ defineProps({
   cursor: pointer;
   border: 1px solid #39495c;
   margin-bottom: 18px;
+  margin-top: 18px;
 }
 .display-card:hover {
   transform: scale(1.01);

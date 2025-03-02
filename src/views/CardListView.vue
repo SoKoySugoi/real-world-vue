@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import CardService from '@/services/CardService.js'
-import CardComponent from '@/components/CardComponent.vue'
+import CardList from '@/components/CardList.vue'
 const cards = ref(null)
 
 onMounted(() => {
@@ -16,16 +16,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="cards">
-    <CardComponent v-for="card in cards" :key="card.id" :card="card" />
+  <div v-if="cards">
+    <CardList :cards="cards"></CardList>
   </div>
 </template>
 
-<style scoped>
-.cards {
-  font-family: Avenir, Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>
+<style scoped></style>

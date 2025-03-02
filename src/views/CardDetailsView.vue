@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import CardService from '../services/CardService.js'
+import AddButton from '@/components/AddToDeckButton.vue'
 
 const card = ref(null)
 
@@ -54,6 +55,7 @@ onMounted(() => {
             <strong>Description:</strong>
             <p>{{ card.description }}</p>
           </li>
+          <AddButton :card="card" />
         </ul>
       </div>
     </div>
