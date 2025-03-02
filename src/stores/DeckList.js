@@ -14,5 +14,8 @@ export const useDeckListStore = defineStore('deckList', {
         return object.id !== cardId
       })
     },
+    getCards() {
+      return this.deckList
+    },
   },
 })

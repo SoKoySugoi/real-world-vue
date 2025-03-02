@@ -1,9 +1,13 @@
 <script setup>
 import CardComponent from '@/components/CardComponent.vue'
-defineProps({
+import { onMounted } from 'vue'
+const props = defineProps({
   cards: {
     type: Array,
   },
+})
+onMounted(() => {
+  console.log(props.cards)
 })
 </script>
 

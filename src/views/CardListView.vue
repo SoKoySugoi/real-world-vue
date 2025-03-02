@@ -20,5 +20,3 @@ onMounted(() => {
     <CardList :cards="cards" />
   </div>
 </template>
-
-<style scoped></style>

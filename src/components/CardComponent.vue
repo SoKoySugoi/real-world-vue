@@ -2,7 +2,6 @@
 defineProps({
   card: {
     type: Object,
-    required: true,
   },
 })
 </script>
@@ -15,6 +14,10 @@ defineProps({
       </div>
     </RouterLink>
   </div>
+  <!--<div v-else>
+    <h2>Your deck has no availible cards</h2>
+    <p>build your deck by selecting a card from the library.</p>
+  </div>-->
 </template>
 
 <style scoped>
