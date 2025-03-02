@@ -14,7 +14,7 @@ onMounted(() => {
 <template>
   <table class="container">
     <tbody>
-      <td v-for="card in cards" :key="card.id"><CardComponent :card="card" /></td>
+      <td v-for="card in props.cards" :key="card.id"><CardComponent :card="card" /></td>
     </tbody>
   </table>
 </template>
