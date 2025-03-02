@@ -10,7 +10,5 @@ defineProps({
 const store = useDeckListStore()
 </script>
 <template>
-  <form @submit.prevent="">
-    <button @click="store.addCard(card)" class="btn btn-success">Add to Deck</button>
-  </form>
+  <button @click="store.addCard(card)" class="btn btn-success">Add to Deck</button>
 </template>

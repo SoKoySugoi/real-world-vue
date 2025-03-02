@@ -17,7 +17,7 @@ onMounted(() => {
 
 <template>
   <div v-if="cards">
-    <CardList :cards="cards"></CardList>
+    <CardList :cards="cards" />
   </div>
 </template>
 
