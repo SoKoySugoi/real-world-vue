@@ -1,6 +1,6 @@
 <script setup>
 import { storeToRefs } from 'pinia'
-import { useDeckListStore } from '../stores/DeckList.js'
+import { useDeckListStore } from '@/stores/DeckList.js'
 import CardList from '@/components/CardList.vue'
 
 const store = useDeckListStore()
@@ -9,7 +9,7 @@ const { deckList } = storeToRefs(store)
 
 <template>
   <template>
-    <div v-if="deckList.length > 0">
+    <div>
       <CardList :cards="deckList" />
     </div>
   </template>

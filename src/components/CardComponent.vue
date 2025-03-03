@@ -1,16 +1,23 @@
 <script setup>
-defineProps({
+import { onMounted } from 'vue'
+const props = defineProps({
   card: {
     type: Object,
   },
 })
+onMounted(() => {
+  console.log(props.card)
+})
 </script>
 
 <template>
-  <div v-if="card">
-    <RouterLink class="card-details-link" :to="{ name: 'card-details', params: { id: card.id } }">
+  <div>
+    <RouterLink
+      class="card-details-link"
+      :to="{ name: 'card-details', params: { id: props.card.id } }"
+    >
       <div class="display-card">
-        <img v-bind:src="card.image" />
+        <img v-bind:src="props.card.image" />
       </div>
     </RouterLink>
   </div>

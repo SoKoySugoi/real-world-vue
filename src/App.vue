@@ -13,7 +13,9 @@ import { RouterLink, RouterView } from 'vue-router'
         </nav>
       </div>
     </header>
-    <RouterView />
+    <Transition name="grow-in" mode="out-in">
+      <RouterView />
+    </Transition>
   </div>
 </template>
 
@@ -46,5 +48,16 @@ nav a.router-link-exact-active {
 }
 h2 {
   font-size: 20px;
+}
+
+.grow-in-enter-active,
+.grow-in-leave-active {
+  transition: 0.5s ease-in-out;
+}
+
+.grow-in-enter-from,
+.grow-in-leave-to {
+  opacity: 0;
+  transform: scale(80%);
 }
 </style>
