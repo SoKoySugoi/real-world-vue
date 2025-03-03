@@ -12,6 +12,7 @@ const props = defineProps({
       class="card-details-link"
       :to="{ name: 'card-details', params: { id: props.card.id } }"
     >
+      <strong>{{ card.name }}</strong>
       <div class="display-card">
         <img v-bind:src="props.card.image" />
       </div>
@@ -29,7 +30,7 @@ const props = defineProps({
   width: 150px;
   height: auto;
   cursor: pointer;
-  border: 1px solid #39495c;
+  border: 1px solid #aac9e7;
   margin: 18px;
 }
 .display-card:hover {
@@ -37,6 +38,7 @@ const props = defineProps({
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
 }
 .card-details-link {
+  color: #aac9e7;
   text-decoration: none;
 }
 </style>

@@ -16,7 +16,7 @@
       <li>A System of Modular Vue Components</li>
     </ul>
     <p>Upon deployment, this page could be populated with modular components.</p>
-    <p>The templates could house the latest information about new cards and events.</p>
+    <p>Those templates could house the latest information about new cards and events.</p>
   </div>
 </template>
 <style scoped>

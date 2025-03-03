@@ -73,7 +73,7 @@ onMounted(() => {
   padding: 20px;
   width: flex;
   height: auto;
-  border: 1px solid #39495c;
+  border: 1px solid #aac9e7;
   margin-top: 18px;
 }
 ul {
