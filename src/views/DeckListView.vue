@@ -9,7 +9,7 @@ const { deckList } = storeToRefs(store)
 
 <template>
   <template>
-    <div>
+    <div v-if="deckList.length > 0">
       <CardList :cards="deckList" />
     </div>
   </template>

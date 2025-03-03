@@ -4,11 +4,7 @@ export const useDeckListStore = defineStore('deckList', {
   state: () => ({
     deckList: [],
   }),
-  getters: {
-    getDeck(state) {
-      return state.deckList
-    },
-  },
+  // getters : none
   actions: {
     addCard(card) {
       this.deckList.push(card)

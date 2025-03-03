@@ -1,10 +1,13 @@
 <script setup>
 import CardComponent from '@/components/CardComponent.vue'
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 const props = defineProps({
   cards: {
     type: Array,
   },
+})
+onMounted(() => {
+  console.log(props.cards)
 })
 const tempArray = computed(() => {
   const result = []

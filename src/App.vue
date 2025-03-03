@@ -13,9 +13,11 @@ import { RouterLink, RouterView } from 'vue-router'
         </nav>
       </div>
     </header>
-    <Transition name="grow-in" mode="out-in">
-      <RouterView />
-    </Transition>
+    <router-view v-slot="{ Component }">
+      <transition name="grow-in" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 

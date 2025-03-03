@@ -1,12 +1,8 @@
 <script setup>
-import { onMounted } from 'vue'
 const props = defineProps({
   card: {
     type: Object,
   },
-})
-onMounted(() => {
-  console.log(props.card)
 })
 </script>
 
