@@ -1,8 +1,8 @@
 <template>
-  <table class="container">
+  <table class="container px-2">
     <tbody v-if="cards.length >= 3">
-      <tr v-for="(row, rowIndex) in tempArray" :key="rowIndex">
-        <td v-for="(card, i) in row" :key="i">
+      <tr class="row" v-for="(row, rowIndex) in tempArray" :key="rowIndex">
+        <td class="col-md-4 mx-2" v-for="(card, i) in row" :key="i">
           <CardComponent :card="card" />
         </td>
       </tr>
