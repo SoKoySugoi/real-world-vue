@@ -13,11 +13,13 @@ import { RouterLink, RouterView } from 'vue-router'
         </nav>
       </div>
     </header>
-    <router-view v-slot="{ Component }">
-      <transition name="grow-in" mode="out-in">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+    <div id="component-layout">
+      <router-view v-slot="{ Component }">
+        <transition name="grow-in" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
   </div>
 </template>
 
@@ -28,7 +30,10 @@ import { RouterLink, RouterView } from 'vue-router'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   width: 100%;
-  color: #2c3e50;
+  color: #aac9e7;
+}
+#component-layout {
+  color: #aac9e7;
 }
 nav {
   padding: 20px;
@@ -61,5 +66,13 @@ h2 {
 .grow-in-leave-to {
   opacity: 0;
   transform: scale(80%);
+}
+.image-container {
+  text-align: center;
+}
+.loading {
+  height: 150px; /* Set the height as the height of your image */
+  line-height: 150px;
+  text-align: center; /* Horizontally center the image */
 }
 </style>

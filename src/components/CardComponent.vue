@@ -30,8 +30,7 @@ const props = defineProps({
   height: auto;
   cursor: pointer;
   border: 1px solid #39495c;
-  margin-bottom: 18px;
-  margin-top: 36px;
+  margin: 18px;
 }
 .display-card:hover {
   transform: scale(1.01);

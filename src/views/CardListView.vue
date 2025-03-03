@@ -19,4 +19,7 @@ onMounted(() => {
   <div v-if="cards">
     <CardList :cards="cards" />
   </div>
+  <div class="loading" v-else>
+    <img v-show="true" class="loading" src="../assets/images/Loading.jpg" />
+  </div>
 </template>

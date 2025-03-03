@@ -63,6 +63,9 @@ onMounted(() => {
       <div class="col-xs-3"></div>
     </div>
   </div>
+  <div v-else>
+    <img class="loading" src="/src/assets/images/Loading.jpg" />
+  </div>
 </template>
 
 <style scoped>
