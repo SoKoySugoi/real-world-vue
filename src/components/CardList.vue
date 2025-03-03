@@ -1,7 +1,6 @@
 <script setup>
 import CardComponent from '@/components/CardComponent.vue'
-import { computed } from 'vue'
-import { onMounted } from 'vue'
+import { computed, onMounted } from 'vue'
 const props = defineProps({
   cards: {
     type: Array,
@@ -22,12 +21,17 @@ const tempArray = computed(() => {
 
 <template>
   <table class="container">
-    <tbody>
+    <tbody v-if="cards.length >= 2">
       <tr v-for="(row, rowIndex) in tempArray" :key="rowIndex">
-        <td class="display-card" v-for="card in row" :key="card.id">
+        <td v-for="(card, i) in row" :key="i">
           <CardComponent :card="card" />
         </td>
       </tr>
+    </tbody>
+    <tbody v-else>
+      <td v-for="(card, i) in cards" :key="i">
+        <CardComponent :card="card" />
+      </td>
     </tbody>
   </table>
 </template>
