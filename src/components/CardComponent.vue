@@ -1,11 +1,3 @@
-<script setup>
-const props = defineProps({
-  card: {
-    type: Object,
-  },
-})
-</script>
-
 <template>
   <div>
     <RouterLink
@@ -23,6 +15,14 @@ const props = defineProps({
     <p>build your deck by selecting a card from the library.</p>
   </div>-->
 </template>
+
+<script setup>
+const props = defineProps({
+  card: {
+    type: Object,
+  },
+})
+</script>
 
 <style scoped>
 .display-card img {

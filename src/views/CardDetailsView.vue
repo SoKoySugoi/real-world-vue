@@ -1,27 +1,3 @@
-<script setup>
-import { ref, onMounted } from 'vue'
-import CardService from '../services/CardService.js'
-import AddButton from '@/components/AddToDeckButton.vue'
-
-const card = ref(null)
-
-const props = defineProps({
-  id: {
-    required: true,
-  },
-})
-
-onMounted(() => {
-  CardService.getCard(props.id)
-    .then((response) => {
-      card.value = response.data
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-})
-</script>
-
 <template>
   <div v-if="card">
     <div class="container">
@@ -67,6 +43,30 @@ onMounted(() => {
     <img class="loading" src="/src/assets/images/Loading.jpg" />
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import CardService from '../services/CardService.js'
+import AddButton from '@/components/AddToDeckButton.vue'
+
+const card = ref(null)
+
+const props = defineProps({
+  id: {
+    required: true,
+  },
+})
+
+onMounted(() => {
+  CardService.getCard(props.id)
+    .then((response) => {
+      card.value = response.data
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+</script>
 
 <style scoped>
 .display-card img {

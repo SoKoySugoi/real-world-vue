@@ -1,24 +1,3 @@
-<script setup>
-import CardComponent from '@/components/CardComponent.vue'
-import { computed, onMounted } from 'vue'
-const props = defineProps({
-  cards: {
-    type: Array,
-  },
-})
-onMounted(() => {
-  console.log(props.cards)
-})
-const tempArray = computed(() => {
-  const result = []
-  for (let i = 0; i < props.cards.length; i += 3) {
-    const row = props.cards.slice(i, i + 3)
-    result.push(row)
-  }
-  return result
-})
-</script>
-
 <template>
   <table class="container">
     <tbody v-if="cards.length >= 3">
@@ -35,3 +14,21 @@ const tempArray = computed(() => {
     </tbody>
   </table>
 </template>
+
+<script setup>
+import CardComponent from '@/components/CardComponent.vue'
+import { computed } from 'vue'
+const props = defineProps({
+  cards: {
+    type: Array,
+  },
+})
+const tempArray = computed(() => {
+  const result = []
+  for (let i = 0; i < props.cards.length; i += 3) {
+    const row = props.cards.slice(i, i + 3)
+    result.push(row)
+  }
+  return result
+})
+</script>
