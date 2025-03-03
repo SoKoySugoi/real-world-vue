@@ -30,9 +30,6 @@ defineProps({
   margin-bottom: 18px;
   margin-top: 36px;
 }
-img {
-  width: 150px;
-}
 .display-card:hover {
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
