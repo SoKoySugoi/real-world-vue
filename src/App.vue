@@ -3,8 +3,8 @@
     <header>
       <div class="wrapper">
         <nav>
-          <RouterLink :to="{ name: 'home' }">Home</RouterLink> |
-          <RouterLink :to="{ name: 'card-list' }">Cards</RouterLink> |
+          <RouterLink :to="{ name: 'home' }"> Home</RouterLink>
+          | <RouterLink :to="{ name: 'card-list' }">Cards</RouterLink> |
           <RouterLink :to="{ name: 'deck-list' }">Deck</RouterLink>
         </nav>
       </div>
