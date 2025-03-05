@@ -1,6 +1,7 @@
 <template>
   <div v-if="deckList.length > 0">
     <card-list :cards="deckList" />
+    <comment-submit-form />
   </div>
   <div v-else-if="deckList.length == 0">
     <h4>
@@ -15,7 +16,9 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import { useDeckListStore } from '@/stores/DeckList.js'
+
 import CardList from '@/components/CardList.vue'
+import CommentSubmitForm from '@/components/CommentSubmitForm.vue'
 
 const store = useDeckListStore()
 const { deckList } = storeToRefs(store)

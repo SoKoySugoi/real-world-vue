@@ -1,5 +1,5 @@
 @import './base.css';
-/* nav tag layout css credited to vueMastery courses */
+/* nav tag and form layout css credited to vueMastery courses */
 
 #layout {
   font-family: Avenir, Arial, Helvetica, sans-serif;
@@ -7,13 +7,40 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   width: 100%;
-  color: #aac9e7;
+  color: #d8d8d8;
 }
-ul {
-  list-style-type: none;
+.review-form {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  width: 325px;
+  padding: 20px;
+  margin: 40px;
+
+  border: 2px solid #d8d8d8;
+
+  -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+  box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
 }
-h2 {
-  font-size: 20px;
+.review-container {
+  width: 425px;
+  padding: 20px;
+  text-align: left;
+
+  -webkit-box-shadow: 0px 2px 20px -12px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 2px 20px -12px rgba(0, 0, 0, 0.57);
+  box-shadow: 2px 20px -12px rgba(0, 0, 0, 0.57);
+
+  margin-left: 40px;
+  border: 2px solid #d8d8d8;
+}
+.review-container li {
+  margin-bottom: 30px;
+}
+.review-form .button {
+  display: block;
+  margin: 30px auto;
 }
 nav {
   padding: 20px;
@@ -23,6 +50,13 @@ nav {
   -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
+}
+
+ul {
+  list-style-type: none;
+}
+h2 {
+  font-size: 20px;
 }
 
 .grow-in-enter-active,

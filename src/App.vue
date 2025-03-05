@@ -31,11 +31,11 @@ import { RouterLink, RouterView } from 'vue-router'
 nav ul li a {
   font-weight: bold;
   margin-left: 15px;
-  color: #2c3e50;
+  color: #d8d8d8;
   text-decoration: none;
 }
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: olive;
   text-decoration: none;
 }
 </style>
