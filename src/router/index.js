@@ -1,26 +1,32 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import EventListView from '../views/EventListView.vue'
-import EventDetailsView from '../views/EventDetailsView.vue'
-import AboutView from '../views/AboutView.vue'
+import CardListView from '../views/CardListView.vue'
+import CardDetailsView from '../views/CardDetailsView.vue'
+import HomeView from '../views/HomeView.vue'
+import DeckListView from '@/views/DeckListView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'event-list',
-      component: EventListView,
+      name: 'home',
+      component: HomeView,
     },
     {
-      path: '/event/:id',
-      name: 'event-details',
+      path: '/cards',
+      name: 'card-list',
+      component: CardListView,
+    },
+    {
+      path: '/deck',
+      name: 'deck-list',
+      component: DeckListView,
+    },
+    {
+      path: '/cards/:id',
+      name: 'card-details',
       props: true,
-      component: EventDetailsView,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: AboutView,
+      component: CardDetailsView,
     },
   ],
 })

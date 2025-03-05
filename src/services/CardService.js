@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'https://my-json-server.typicode.com/SoKoySugoi/real-world-vue',
+  baseURL: 'https://my-json-server.typicode.com/SoKoySugoi/my-repo',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -10,10 +10,10 @@ const apiClient = axios.create({
 })
 
 export default {
-  getEvents() {
-    return apiClient.get('/events')
+  getCards() {
+    return apiClient.get('/cards')
   },
-  getEvent(id) {
-    return apiClient.get('/events/' + id)
+  getCard(id) {
+    return apiClient.get('/cards/' + id)
   },
 }

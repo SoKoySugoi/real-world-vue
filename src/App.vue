@@ -1,3 +1,28 @@
+<template>
+  <div id="layout">
+    <header>
+      <nav class="navbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'home' }"> Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'card-list' }">Cards</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'deck-list' }">Deck</router-link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <router-view v-slot="{ Component }">
+      <transition name="grow-in" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
+</template>
+
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
@@ -15,28 +40,3 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterView />
   </div>
 </template>
-
-<style>
-#layout {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-nav {
-  padding: 30px;
-}
-nav a {
-  font-weight: bold;
-  text-decoration: none;
-  color: #2c3e50;
-}
-nav a.router-link-exact-active {
-  color: #42b983;
-  text-decoration: none;
-}
-h2 {
-  font-size: 20px;
-}
-</style>
