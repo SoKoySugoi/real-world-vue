@@ -18,12 +18,14 @@ defineProps({
 </script>
 
 <style scoped>
+div a {
+  text-decoration: none;
+}
 .display-card img {
   width: 150px;
   height: auto;
 }
 .display-card:hover {
-  text-decoration: none;
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
 }
