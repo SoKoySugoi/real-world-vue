@@ -1,10 +1,10 @@
 <template>
   <div v-if="deckList.length > 0">
-    <CardList :cards="deckList" />
+    <card-list :cards="deckList" />
   </div>
   <div v-else-if="deckList.length == 0">
     <h4>
-      <RouterLink :to="{ name: 'card-list' }"> This deck doesn't have cards yet. </RouterLink>
+      <router-link :to="{ name: 'card-list' }"> This deck doesn't have cards yet. </router-link>
     </h4>
   </div>
   <div class="loading" v-else>

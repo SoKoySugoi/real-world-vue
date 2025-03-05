@@ -1,6 +1,6 @@
 <template>
   <div>
-    <RouterLink
+    <router-link
       class="card-details-link"
       :to="{ name: 'card-details', params: { id: props.card.id } }"
     >
@@ -8,7 +8,7 @@
       <div class="display-card">
         <img v-bind:src="props.card.image" />
       </div>
-    </RouterLink>
+    </router-link>
   </div>
   <!--<div v-else>
     <h2>Your deck has no availible cards</h2>

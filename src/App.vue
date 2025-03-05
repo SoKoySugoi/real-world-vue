@@ -3,9 +3,9 @@
     <header>
       <div class="wrapper">
         <nav>
-          <RouterLink :to="{ name: 'home' }"> Home</RouterLink>
-          | <RouterLink :to="{ name: 'card-list' }">Cards</RouterLink> |
-          <RouterLink :to="{ name: 'deck-list' }">Deck</RouterLink>
+          <router-link :to="{ name: 'home' }"> Home</router-link>
+          | <router-link :to="{ name: 'card-list' }">Cards</router-link> |
+          <router-link :to="{ name: 'deck-list' }">Deck</router-link>
         </nav>
       </div>
     </header>

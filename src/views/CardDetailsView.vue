@@ -47,7 +47,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import CardService from '../services/CardService.js'
-import AddButton from '@/components/AddToDeckButton.vue'
+import AddButton from '@/components/DeckButtonAdd.vue'
 
 const card = ref(null)
 

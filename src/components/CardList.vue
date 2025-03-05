@@ -3,20 +3,20 @@
     <tbody v-if="cards.length >= 3">
       <tr class="row" v-for="(row, rowIndex) in tempArray" :key="rowIndex">
         <td class="col-md-4 mx-2" v-for="(card, i) in row" :key="i">
-          <CardComponent :card="card" />
+          <card-component :card="card" />
         </td>
       </tr>
     </tbody>
     <tbody v-else>
       <td v-for="(card, i) in cards" :key="i">
-        <CardComponent :card="card" />
+        <card-component :card="card" />
       </td>
     </tbody>
   </table>
 </template>
 
 <script setup>
-import CardComponent from '@/components/CardComponent.vue'
+import CardComponent from '@/components/CardListItem.vue'
 import { computed } from 'vue'
 const props = defineProps({
   cards: {
