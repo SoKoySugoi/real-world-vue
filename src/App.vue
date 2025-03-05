@@ -1,21 +1,25 @@
 <template>
   <div id="layout">
     <header>
-      <div class="wrapper">
-        <nav>
-          <router-link :to="{ name: 'home' }"> Home</router-link>
-          | <router-link :to="{ name: 'card-list' }">Cards</router-link> |
-          <router-link :to="{ name: 'deck-list' }">Deck</router-link>
-        </nav>
-      </div>
+      <nav class="navbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'home' }"> Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'card-list' }">Cards</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'deck-list' }">Deck</router-link>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <div id="component-layout">
-      <router-view v-slot="{ Component }">
-        <transition name="grow-in" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </div>
+    <router-view v-slot="{ Component }">
+      <transition name="grow-in" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 
@@ -24,8 +28,9 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <style lang="css" scoped>
-nav a {
+nav ul li a {
   font-weight: bold;
+  margin-left: 15px;
   color: #2c3e50;
   text-decoration: none;
 }

@@ -1,5 +1,5 @@
 @import './base.css';
-/* layout css credited to vueMastery courses */
+/* nav tag layout css credited to vueMastery courses */
 
 #layout {
   font-family: Avenir, Arial, Helvetica, sans-serif;
@@ -9,10 +9,9 @@
   width: 100%;
   color: #aac9e7;
 }
-#component-layout {
-  color: #aac9e7;
+ul {
+  list-style-type: none;
 }
-
 h2 {
   font-size: 20px;
 }
